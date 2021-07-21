@@ -6,7 +6,7 @@ const cors = require('cors')
 
 
 const app = express()
-
+const port = 5000
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -52,6 +52,6 @@ client.connect(err => {
 
 })
 
-app.listen(process.env.PORT) 
+app.listen(process.env.PORT || port) 
 
  
